@@ -5,7 +5,8 @@ from control_plane_server.di.shared_providers.nats_client_provider import NatsCl
 from control_plane_server.bots.di.providers import(
     NatsBotEventSubscriberProvider,
     NatsBotCommandPublisherProvider,
-    BotEventProvider
+    BotEventProvider,
+    BotLifecycleUCProvider
 )
 
 def create_container():
@@ -15,6 +16,8 @@ def create_container():
         #============================= BOTS MODULE ==============================
         NatsBotCommandPublisherProvider(),
         NatsBotEventSubscriberProvider(),
-        BotEventProvider()
+        BotEventProvider(),
+        BotLifecycleUCProvider(),
+        
         
     )

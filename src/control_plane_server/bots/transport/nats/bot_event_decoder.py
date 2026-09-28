@@ -14,7 +14,7 @@ class BotEventDecodeError(ValueError):
 
 @dataclass(frozen=True, slots=True)
 class BotEventRoute:
-    msg_type: str # суффикс NATS сабджект для поиска команды. Например "lifecycle.RunBotBotEvent"
+    msg_type: str # суффикс NATS сабджект для поиска ивента. Например "lifecycle.RunBotEvent"
     msg_model: type[BotMessage] # класс модели из nats_contracts
     bot_event_model: type[BotEvent] # внутренняя команда бота
 

@@ -1,3 +1,4 @@
 from .nats_bot_event_subscriber_provider import NatsBotEventSubscriberProvider
 from .nats_bot_command_publisher_provider import NatsBotCommandPublisherProvider
-from  .bot_event_provider import BotEventProvider
+from .bot_event_provider import BotEventProvider
+from .use_case_provider import BotLifecycleUCProvider
