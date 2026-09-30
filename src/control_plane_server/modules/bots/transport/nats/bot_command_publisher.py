@@ -6,8 +6,8 @@ from nats.js.client import JetStreamContext
 from nats_contracts.control.bot.v1 import ControlMessage
 from nats_contracts.control.bot.v1.common.subjects import generate_control_to_bot_command_subject
 
-from control_plane_server.bots.commands.control_command import ControlCommand
-from control_plane_server.bots.transport.nats.command_contracts.registry import COMMAND_CONTRACTS
+from control_plane_server.modules.bots.commands.control_command import ControlCommand
+from control_plane_server.modules.bots.transport.nats.command_contracts.registry import COMMAND_CONTRACTS
 
 logger = logging.getLogger(__name__)
 

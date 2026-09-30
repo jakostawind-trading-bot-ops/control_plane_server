@@ -7,7 +7,7 @@ from fastapi import FastAPI
 from control_plane_server.logging_config import configure_logging, shutdown_logging
 
 from control_plane_server.di.container import create_container
-from control_plane_server.bots.ports.bot_event_subscriber import BotEventSubscriber
+from control_plane_server.modules.bots.ports.bot_event_subscriber import BotEventSubscriber
 
 logger = logging.getLogger(__name__)
 

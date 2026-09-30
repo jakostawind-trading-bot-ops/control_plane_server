@@ -1,6 +1,6 @@
 import logging
 
-from control_plane_server.bots.events.event import BotEvent, BotEventHandler
+from control_plane_server.modules.bots.events.event import BotEvent, BotEventHandler
 
 
 logger = logging.getLogger(__name__)

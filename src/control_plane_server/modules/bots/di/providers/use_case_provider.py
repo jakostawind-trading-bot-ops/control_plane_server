@@ -1,6 +1,6 @@
 from dishka import Provider, Scope, provide
 
-from control_plane_server.bots.use_cases import *
+from control_plane_server.modules.bots.use_cases import *
 
 class BotLifecycleUCProvider(Provider):
     scope = Scope.APP

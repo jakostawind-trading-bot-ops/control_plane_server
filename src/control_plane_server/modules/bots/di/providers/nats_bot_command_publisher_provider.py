@@ -7,8 +7,8 @@ from nats.js.client import JetStreamContext
 
 from nats_contracts.control.bot.v1.common.subjects import CONTROL_TO_BOT_COMMANDS_JETSTEAM
 
-from control_plane_server.bots.ports.bot_command_publisher import BotCommandPublisher
-from control_plane_server.bots.transport.nats.bot_command_publisher import NatsBotCommandPublisher
+from control_plane_server.modules.bots.ports.bot_command_publisher import BotCommandPublisher
+from control_plane_server.modules.bots.transport.nats.bot_command_publisher import NatsBotCommandPublisher
 
 logger = logging.getLogger(__name__)
 

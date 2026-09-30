@@ -1,6 +1,6 @@
-from control_plane_server.bots.transport.nats.bot_event_decoder import BotEventRoute
+from control_plane_server.modules.bots.transport.nats.bot_event_decoder import BotEventRoute
     
-from control_plane_server.bots.events import (
+from control_plane_server.modules.bots.events import (
     BotStartedEvent
 )
 

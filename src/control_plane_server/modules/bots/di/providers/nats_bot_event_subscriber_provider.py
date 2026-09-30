@@ -7,10 +7,10 @@ from nats.aio.client import Client
 from nats.js.client import JetStreamContext
 
 
-from control_plane_server.bots.events.dispatcher import BotEventDispatcher
-from control_plane_server.bots.transport.nats.bot_event_decoder import BotEventDecoder
-from control_plane_server.bots.ports.bot_event_subscriber import BotEventSubscriber
-from control_plane_server.bots.transport.nats.bot_event_subscriber import NatsBotEventSubscriber
+from control_plane_server.modules.bots.events.dispatcher import BotEventDispatcher
+from control_plane_server.modules.bots.transport.nats.bot_event_decoder import BotEventDecoder
+from control_plane_server.modules.bots.ports.bot_event_subscriber import BotEventSubscriber
+from control_plane_server.modules.bots.transport.nats.bot_event_subscriber import NatsBotEventSubscriber
 
 logger = logging.getLogger(__name__)
 

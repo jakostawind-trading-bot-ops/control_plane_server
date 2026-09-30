@@ -1,6 +1,6 @@
 from typing import Protocol
 
-from control_plane_server.bots.events.event import BotEvent
+from control_plane_server.modules.bots.events.event import BotEvent
 
 
 class BotEventDispatcher(Protocol):

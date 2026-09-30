@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 import logging
 
-from control_plane_server.bots.events.event import BotEvent, BotEventHandler
-from control_plane_server.bots.use_cases import BotStartedUC
+from control_plane_server.modules.bots.events.event import BotEvent, BotEventHandler
+from control_plane_server.modules.bots.use_cases import BotStartedUC
 
 logger = logging.getLogger(__name__)
 

@@ -5,7 +5,7 @@ from pydantic import ValidationError
 
 from nats_contracts.bot.control.v1 import BotMessage
 
-from control_plane_server.bots.events.event import BotEvent
+from control_plane_server.modules.bots.events.event import BotEvent
 
 
 class BotEventDecodeError(ValueError):

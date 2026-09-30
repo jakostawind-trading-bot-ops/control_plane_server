@@ -1,10 +1,10 @@
 from dishka import Provider, Scope, provide
 
-from control_plane_server.bots.events.dispatcher import BotEventDispatcher
-from control_plane_server.bots.transport.nats.bot_event_decoder import BotEventDecoder
-from control_plane_server.bots.transport.nats.event_routes.event_routes import BOT_EVENT_ROUTES
+from control_plane_server.modules.bots.events.dispatcher import BotEventDispatcher
+from control_plane_server.modules.bots.transport.nats.bot_event_decoder import BotEventDecoder
+from control_plane_server.modules.bots.transport.nats.event_routes.event_routes import BOT_EVENT_ROUTES
 
-from control_plane_server.bots.events import (
+from control_plane_server.modules.bots.events import (
     BotStartedEvent, BotStartedHandler
 )
 

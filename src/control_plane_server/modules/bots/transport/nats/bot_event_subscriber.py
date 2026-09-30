@@ -3,8 +3,8 @@ import logging
 from nats.aio.msg import Msg
 from nats.js.client import JetStreamContext
 
-from control_plane_server.bots.events.dispatcher import BotEventDispatcher
-from control_plane_server.bots.transport.nats.bot_event_decoder import BotEventDecoder, BotEventDecodeError
+from control_plane_server.modules.bots.events.dispatcher import BotEventDispatcher
+from control_plane_server.modules.bots.transport.nats.bot_event_decoder import BotEventDecoder, BotEventDecodeError
 
 logger = logging.getLogger(__name__)
 
