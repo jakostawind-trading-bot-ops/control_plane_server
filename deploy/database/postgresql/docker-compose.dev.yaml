@@ -1,0 +1,39 @@
+services:
+  cps-pg-dev:
+    image: postgres:18.6-alpine
+    container_name: cps-pg-dev
+    env_file:
+      - .env.dev
+    environment:
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql
+    networks:
+      - pg_network
+
+  terraform:
+    image: hashicorp/terraform:1.16.4
+    profiles:
+      - tools
+    working_dir: /workspace/dev
+    user: "${TF_UID:-1000}:${TF_GID:-1000}"
+    command: ["version"]
+    environment:
+      TF_VAR_POSTGRES_USER: ${POSTGRES_USER}
+      TF_VAR_POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      TF_VAR_POSTGRES_HOST: ${POSTGRES_HOST}
+      TF_VAR_POSTGRES_PORT: ${POSTGRES_PORT}
+    volumes:
+      - ../../../infra:/workspace
+    networks:
+      - pg_network
+
+volumes:
+  pg_data:
+
+networks:
+  pg_network:
+    name: pg_network
+    driver: bridge
